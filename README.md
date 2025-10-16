@@ -106,6 +106,6 @@ expose `/api/supporters/top`.
 
 ---
 
-## License
+## License 
 
 [MIT](LICENSE) © 2025 XdrBOBX
