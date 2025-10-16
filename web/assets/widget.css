@@ -1,0 +1,62 @@
+:root{
+  --bg: #0b0d12;
+  --panel: #121623;
+  --muted: #8c93a8;
+  --text: #e6ebff;
+  --accent: #a78bfa;
+  --accent-2: #22d3ee;
+  --heart-empty: #2a3045;
+  --heart-fill: #ff3b7f;
+  --ok: #22c55e;
+  --warn: #f59e0b;
+  --danger: #ef4444;
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.04);
+}
+html,body{background:var(--bg);color:var(--text);font:16px/1.45 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Inter,sans-serif;margin:0;padding:0}
+.wrap{max-width:980px;margin:32px auto;padding:0 16px}
+.tr-heart-widget{background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00)); border:1px solid rgba(255,255,255,.06); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden}
+.header{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:18px 20px;border-bottom:1px solid rgba(255,255,255,.06);background:linear-gradient(180deg, rgba(167,139,250,.08), rgba(167,139,250,.02))}
+.title{font-weight:700;letter-spacing:.2px}
+.discord-login{display:flex;gap:10px;align-items:center;background:#5865F2;border:none;color:#fff;border-radius:999px;padding:10px 14px;font-weight:600;cursor:pointer;box-shadow:0 6px 20px rgba(88,101,242,.35)}
+.discord-login[disabled]{opacity:.7;cursor:not-allowed}
+.discord-login img{width:18px;height:18px}
+.user-pill{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);padding:6px 10px;border-radius:999px}
+.user-pill img{width:20px;height:20px;border-radius:50%}
+.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:0}
+@media (max-width:860px){.grid{grid-template-columns:1fr}}
+.col{padding:20px}
+.split{display:grid;grid-template-columns:1fr;gap:18px}
+.card{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:16px;box-shadow:var(--shadow)}
+.rating-block h3{margin:4px 0 6px}
+.hint{color:var(--muted);font-size:.92rem}
+.hearts{display:inline-flex;flex-direction:row-reverse;gap:8px}
+.hearts input{position:absolute;opacity:0;pointer-events:none}
+.hearts label{display:inline-grid;place-items:center;width:34px;height:34px;cursor:pointer;transition:transform .12s ease}
+.hearts label:hover{transform:translateY(-1px) scale(1.04)}
+.hearts svg{width:26px;height:26px;fill:var(--heart-empty);filter:drop-shadow(0 2px 4px rgba(0,0,0,.25))}
+.hearts input:checked ~ label svg,
+.hearts label:hover svg,
+.hearts label:hover ~ label svg{fill:var(--heart-fill)}
+.sr-only{position:absolute;left:-9999px}
+.comment{width:100%;min-height:86px;border-radius:10px;border:1px solid rgba(255,255,255,.08);background:rgba(0,0,0,.25);color:var(--text);padding:10px 12px;resize:vertical}
+.actions{display:flex;gap:10px;align-items:center;margin-top:10px}
+.btn{background:var(--accent);border:none;color:#0b0d12;padding:10px 14px;border-radius:12px;font-weight:700;cursor:pointer}
+.btn.secondary{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,.12)}
+.toast{font-size:.95rem;margin-left:8px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:600px){.stats{grid-template-columns:1fr}}
+.stat .top{display:flex;align-items:baseline;gap:8px}
+.avg{font-size:2.1rem;font-weight:800}
+.dist{margin-top:8px}
+.bar{height:8px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden}
+.bar > span{display:block;height:100%;background:linear-gradient(90deg, var(--heart-fill), #ff7aa8)}
+.reviews .item{display:grid;grid-template-columns:auto 1fr;gap:10px;padding:10px 0;border-bottom:1px dashed rgba(255,255,255,.08)}
+.reviews .item:last-child{border-bottom:none}
+.avatar{width:36px;height:36px;border-radius:50%;background:#1f2437}
+.meta{display:flex;gap:10px;align-items:center;color:var(--muted);font-size:.9rem}
+.supporters .row{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px dashed rgba(255,255,255,.08)}
+.supporters .row:last-child{border-bottom:none}
+.badge{font-size:.75rem;background:linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip:text; background-clip:text; color:transparent; font-weight:800}
+.small{color:var(--muted);font-size:.85rem}
+.footer{padding:12px 20px;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
