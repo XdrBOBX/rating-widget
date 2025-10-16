@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TechnoHeart – Hearts Rating Widget</title>
+  <link rel="stylesheet" href="./assets/widget.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="tr-heart-widget"
+         data-title="Bewertung – RedM/GTA"
+         data-guild="YOUR_GUILD_ID"
+         data-api=""
+         data-discord-client=""
+         data-redirect="">
+      <div class="header">
+        <div class="title">💜 <span class="js-title">Bewertung</span></div>
+        <div class="auth">
+          <button class="discord-login js-discord-login" title="Mit Discord einloggen">
+            <img alt="Discord" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f47e.svg"/>
+            <span>Anmelden</span>
+          </button>
+          <div class="user-pill js-user-pill" style="display:none">
+            <img class="js-user-avatar" alt="Avatar"/>
+            <span class="js-user-name">user</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="col">
+          <div class="split">
+            <div class="card rating-block" data-category="game">
+              <h3>Server / Game</h3>
+              <div class="hint">Wie zufrieden bist du insgesamt mit dem Server / Spielgefühl?</div>
+              <div class="hearts" role="radiogroup" aria-label="Server Bewertung">
+                <input class="js-rate" id="game-5" type="radio" name="game" value="5"><label for="game-5" aria-label="5 Herzen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.001 4.529c2.349-2.279 6.153-2.279 8.502 0 2.349 2.279 2.349 5.973 0 8.252l-7.415 7.194a1.49 1.49 0 0 1-2.103 0L3.57 12.781c-2.349-2.279-2.349-5.973 0-8.252 2.35-2.279 6.153-2.279 8.502 0-.024.023-.047.047-.071.07.024-.023.047-.047.071-.07Z"/></svg></label>
+                <input class="js-rate" id="game-4" type="radio" name="game" value="4"><label for="game-4" aria-label="4 Herzen"><svg viewBox="0 0 24 24"><path d="M12.001 4.529c2.349-2.279 6.153-2.279 8.502 0 2.349 2.279 2.349 5.973 0 8.252l-7.415 7.194a1.49 1.49 0 0 1-2.103 0L3.57 12.781c-2.349-2.279-2.349-5.973 0-8.252 2.35-2.279 6.153-2.279 8.502 0-.024.023-.047.047-.071.07.024-.023.047-.047.071-.07Z"/></svg></label>
+                <input class="js-rate" id="game-3" type="radio" name="game" value="3"><label for="game-3" aria-label="3 Herzen"><svg viewBox="0 0 24 24"><path d="M12.001 4.529c2.349-2.279 6.153-2.279 8.502 0 2.349 2.279 2.349 5.973 0 8.252l-7.415 7.194a1.49 1.49 0 0 1-2.103 0L3.57 12.781c-2.349-2.279-2.349-5.973 0-8.252 2.35-2.279 6.153-2.279 8.502 0-.024.023-.047.047-.071.07.024-.023.047-.047.071-.07Z"/></svg></label>
+                <input class="js-rate" id="game-2" type="radio" name="game" value="2"><label for="game-2" aria-label="2 Herzen"><svg viewBox="0 0 24 24"><path d="M12.001 4.529c2.349-2.279 6.153-2.279 8.502 0 2.349 2.279 2.349 5.973 0 8.252l-7.415 7.194a1.49 1.49 0 0 1-2.103 0L3.57 12.781c-2.349-2.279-2.349-5.973 0-8.252 2.35-2.279 6.153-2.279 8.502 0-.024.023-.047.047-.071.07.024-.023.047-.047.071-.07Z"/></svg></label>
+                <input class="js-rate" id="game-1" type="radio" name="game" value="1"><label for="game-1" aria-label="1 Herz"><svg viewBox="0 0 24 24"><path d="M12.001 4.529c2.349-2.279 6.153-2.279 8.502 0 2.349 2.279 2.349 5.973 0 8.252l-7.415 7.194a1.49 1.49 0 0 1-2.103 0L3.57 12.781c-2.349-2.279-2.349-5.973 0-8.252 2.35-2.279 6.153-2.279 8.502 0-.024.023-.047.047-.071.07.024-.023.047-.047.071-.07Z"/></svg></label>
+              </div>
+              <label class="sr-only" for="comment-game">Kommentar</label>
+              <textarea id="comment-game" class="comment js-comment-game" placeholder="Optional: Was war besonders gut/schlecht?"></textarea>
+            </div>
+
+            <div class="card rating-block" data-category="support">
+              <h3>Support</h3>
+              <div class="hint">Wie zufrieden bist du mit dem Support-Team (Schnelligkeit, Freundlichkeit, Lösung)?</div>
+              <div class="hearts" role="radiogroup" aria-label="Support Bewertung">
+                <input class="js-rate" id="support-5" type="radio" name="support" value="5"><label for="support-5" aria-label="5 Herzen"><svg viewBox="0 0 24 24"><path d="M12.001 4.529c2.349-2.279 6.153-2.279 8.502 0 2.349 2.279 2.349 5.973 0 8.252l-7.415 7.194a1.49 1.49 0 0 1-2.103 0L3.57 12.781c-2.349-2.279-2.349-5.973 0-8.252 2.35-2.279 6.153-2.279 8.502 0-.024.023-.047.047-.071.07.024-.023.047-.047.071-.07Z"/></svg></label>
+                <input class="js-rate" id="support-4" type="radio" name="support" value="4"><label for="support-4" aria-label="4 Herzen"><svg viewBox="0 0 24 24"><path d="M12.001 4.529c2.349-2.279 6.153-2.279 8.502 0 2.349 2.279 2.349 5.973 0 8.252l-7.415 7.194a1.49 1.49 0 0 1-2.103 0L3.57 12.781c-2.349-2.279-2.349-5.973 0-8.252 2.35-2.279 6.153-2.279 8.502 0-.024.023-.047.047-.071.07.024-.023.047-.047.071-.07Z"/></svg></label>
+                <input class="js-rate" id="support-3" type="radio" name="support" value="3"><label for="support-3" aria-label="3 Herzen"><svg viewBox="0 0 24 24"><path d="M12.001 4.529c2.349-2.279 6.153-2.279 8.502 0 2.349 2.279 2.349 5.973 0 8.252l-7.415 7.194a1.49 1.49 0 0 1-2.103 0L3.57 12.781c-2.349-2.279-2.349-5.973 0-8.252 2.35-2.279 6.153-2.279 8.502 0-.024.023-.047.047-.071.07.024-.023.047-.047.071-.07Z"/></svg></label>
+                <input class="js-rate" id="support-2" type="radio" name="support" value="2"><label for="support-2" aria-label="2 Herzen"><svg viewBox="0 0 24 24"><path d="M12.001 4.529c2.349-2.279 6.153-2.279 8.502 0 2.349 2.279 2.349 5.973 0 8.252l-7.415 7.194a1.49 1.49 0 0 1-2.103 0L3.57 12.781c-2.349-2.279-2.349-5.973 0-8.252 2.35-2.279 6.153-2.279 8.502 0-.024.023-.047.047-.071.07.024-.023.047-.047.071-.07Z"/></svg></label>
+                <input class="js-rate" id="support-1" type="radio" name="support" value="1"><label for="support-1" aria-label="1 Herz"><svg viewBox="0 0 24 24"><path d="M12.001 4.529c2.349-2.279 6.153-2.279 8.502 0 2.349 2.279 2.349 5.973 0 8.252l-7.415 7.194a1.49 1.49 0 0 1-2.103 0L3.57 12.781c-2.349-2.279-2.349-5.973 0-8.252 2.35-2.279 6.153-2.279 8.502 0-.024.023-.047.047-.071.07.024-.023.047-.047.071-.07Z"/></svg></label>
+              </div>
+              <label class="sr-only" for="comment-support">Kommentar</label>
+              <textarea id="comment-support" class="comment js-comment-support" placeholder="Optional: Feedback zum Support"></textarea>
+            </div>
+
+            <div class="actions">
+              <button class="btn js-submit">Bewertung senden</button>
+              <button class="btn secondary js-clear">Zurücksetzen</button>
+              <span class="toast js-toast" aria-live="polite"></span>
+            </div>
+            <div class="small">Mit dem Absenden stimmst du einer anonymisierten Speicherung der Bewertungen zu. Optionaler Login via Discord verknüpft die Bewertung mit deinem Account.</div>
+          </div>
+        </div>
+
+        <div class="col" style="background:rgba(255,255,255,.02);border-left:1px solid rgba(255,255,255,.06)">
+          <div class="split">
+            <div class="card stats">
+              <div class="stat" data-kind="game">
+                <div class="top"><span>Server/Game</span><span class="avg js-avg-game">–</span></div>
+                <div class="dist">
+                  <div class="bar"><span class="js-bar-game" style="width:0%"></span></div>
+                  <div class="small js-count-game">0 Bewertungen</div>
+                </div>
+              </div>
+              <div class="stat" data-kind="support">
+                <div class="top"><span>Support</span><span class="avg js-avg-support">–</span></div>
+                <div class="dist">
+                  <div class="bar"><span class="js-bar-support" style="width:0%"></span></div>
+                  <div class="small js-count-support">0 Bewertungen</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card reviews">
+              <div style="display:flex;align-items:center;gap:8px;justify-content:space-between">
+                <h3 style="margin:0">Letzte Rezensionen</h3>
+                <span class="small js-rec-count">–</span>
+              </div>
+              <div class="js-reviews"></div>
+            </div>
+
+            <div class="card supporters">
+              <div style="display:flex;align-items:center;gap:8px;justify-content:space-between">
+                <h3 style="margin:0">Top Supporter</h3>
+                <span class="badge">Diese Woche</span>
+              </div>
+              <div class="js-supporters"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer small">
+        <div>💡 Herzchen statt Sterne – made for RP-Server.</div>
+        <div>Embed-ready · Keyboard & Screenreader freundlich · DSGVO aware</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/widget.js" defer></script>
+</body>
+</html>
