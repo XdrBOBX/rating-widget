@@ -1,0 +1,13 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+
+# Env
+.env
+
+# Mac / misc
+.DS_Store
